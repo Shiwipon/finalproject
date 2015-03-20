@@ -1,0 +1,59 @@
+@charset: "UTF-8";
+
+
+
+body {
+	background-color: grey;
+	margin: auto;
+	outline: 1px solid yellow;
+}
+
+
+/* Regler för allt som ligger i header */
+	 /* Headertext + Logo */
+
+.headerwrapper {
+	background-color: #3DDBE3;
+		text-align: center;
+
+}
+
+.logo {
+	width: 6%;
+	/* padding-left: 25%;  Used to move kitty to the right */
+	vertical-align: bottom;
+}
+
+.title { 
+	padding: 20px;
+	font-size: 400%;
+
+}
+
+.headerwrapper a:link,
+.headerwrapper a:visited,
+.headerwrapper a:focus,
+.headerwrapper a:hover, 
+.headerwrapper a:active {
+	text-decoration: none;
+	color: white;
+	text-shadow: 2px 2px 1px grey;
+ 
+}
+
+/* CSS till bodygrejer. */
+	 /* Navigation */
+
+.topnav {
+	background-color: #BAE1E3;
+	width: 85%;					/*OBS! Nyare versioner av webbläsare använder W3Cs box-model, och det mäter content + padding och margin.*/
+	padding-right: 15%; 		/*Man kan byta till gamla boxmodel (boxen har padding och margin inuti) genom box-sizing: border-box; men jag ville komma ihåg denna skillnad, och har därför inte använd den gamla version.  */
+	margin: auto;
+	
+
+	text-align: right;
+	font-size: 140%;
+	border-top: 2px solid #DAF3F5;
+	border-bottom: 2px solid #DAF3F5;
+
+}
