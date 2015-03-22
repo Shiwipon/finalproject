@@ -115,7 +115,7 @@ nav {
 
 
 .main {
-	background-color: #5B5B5B;   /* Dark grey */
+	background-color: #5B5B5B;  			 /* Dark grey */
 	width: 60%;
 	margin: 0 auto;
 	/* height: 100%; SÅ vitt jag kan se gör det här ingenting just nu */
@@ -250,7 +250,7 @@ table th,
 table td {
 	margin: auto;					/* Centers the div */
 	padding: 10px;
-	vertical-align: top;
+	vertical-align: middle;
 	
 
 	border-collapse: collapse;
@@ -261,6 +261,7 @@ table td {
 	outline: 1px solid red;		 /* Provisorisk */
 }
 
-table th {
+th {
 	font-size: 170%;
+	background: #808080;
 }
