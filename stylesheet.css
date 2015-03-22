@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-
+/* GLOBALA REGLER SOM GÄLLER ÖVER HELA WEBBSIDAN */
 body {
 	background-color: grey;
 	margin: auto;
@@ -122,14 +122,68 @@ nav {
 	padding: 0 0.5% 0.1% 0.5%;  		/* För att skapa balken bredvid main och aside, och ha lite utrymme på underkanten*/	
 }
 
+.main > article > h1,
+.main > article > h2 {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;   	
+	margin: 0;
+	padding: 5px 2%;							/* Distans från vänstersida ; subtrahera 2 % ifrån width! Samma som main paragraferna för att skapa enhet. */
+	background-color: #36A3D1;
+	color: white;
+	text-shadow: 1px 1px 1px darkgrey;
+	box-shadow: 0 2px 1px darkgrey;
+	z-index: 1;
+}
 
-.main p {
+.main > article > h2 {
+	font-size: 1.2em;							/* Förändring av typsnittens storlek, eftersom H1 och H2 är samma storlek!? */
+}
+
+
+.main p {				/*OBS OBS OBS!! ONÖDIGT!? KOLLA NEDAN I ARTICLE! */
 	padding: 2px 2%;							/* Distans från kanten för allt main-paragraf innehåll, samma som main header. */
+}
+
+.introimage {
+	float: right;
+	width: 175px;
+	height: 150px;
+	padding: 1em;
+}
+
+article {
+	background-color: #E8F3F4;					/*Light blue grey */
+	width: 100%;
+												/* height: 100%; SÅ vitt jag kan se gör det här ingenting just nu */
+	-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;   				/* Jag blev trÖtt ganska snabbt av nya systemet. Så för att bli mer vänd till att använda både system, har jag även border-box här. Vet inte om det är negativt att använda både bredvid varnadra? */
+	padding: 1em 0;									/* Sätter article texten bort ifrån högerkanten, och ger aside mer utrymme. */
+	margin-bottom: 2%;
+	box-shadow: 0 1px 2px black;
+}
+
+footer {
+	clear: both; 								/* För att nollställa/cleara float från förut! */
+	margin: auto;
+	margin-top: 0;
+	padding: 0;	
+	background-color: #282828;   				/*Really dark grey for footer */
+	color: white;
+	width: 61%; 								/* Samma bredd som main */
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+footer > p {
+	margin: 0 0 1em  0;
+	padding: 0.5% 0;
+	text-align: center;
 }
 
 
 
-	/* Allt innehåll till aside menyn huvudsidan */
+/* BÖRJAN AV LAYOUT OCH INNEHÅLL PÅ HEMSIDAN */
+	/* Allt innehåll till aside menyn på huvudsidan */
 
 aside {
 	float: right;
@@ -150,70 +204,63 @@ aside img {
 }
 
 
+/* Allt innehåll till introtext på huvud/hemmasidan. */
 
-.introimage {
-	float: right;
-	width: 20%;
-	padding: 1em;
-}
-
-
-/* Allt innehåll till introtext på huvudsidan. */
-
-article {
+.homepage article {
 	/* display: block; */
-			background: linear-gradient(to right, #E8F3F4 79%, #3A3A3A 79%);   /* Faux column lösning till problemet med aside som inte räcker till footer. 79% eftersom aside-elementen tar 20% + (0.5x2) */
-	background-color: #E8F3F4;					/*Light blue grey */
-	width: 100%;
-												/* height: 100%; SÅ vitt jag kan se gör det här ingenting just nu */
-	-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;   				/* Jag blev trÖtt ganska snabbt av nya systemet. Så för att bli mer vänd till att använda både system, har jag även border-box här. Vet inte om det är negativt att använda både bredvid varnadra? */
-	padding: 1em 0;									/* Sätter article texten bort ifrån högerkanten, och ger aside mer utrymme. */
-	margin-bottom: 2%;
-	box-shadow: 0 1px 2px black;
+	background: linear-gradient(to right, #E8F3F4 79%, #3A3A3A 79%);   /* Faux column lösning till problemet med aside som inte räcker till footer. 79% eftersom aside-elementen tar 20% + (0.5x2) */
+	
 }
 
-.main > article > p {
+.homepage .main > article > p {
 	padding-right: 25%;
 }
 
-.main > article >  p::first-letter {
+.homepage .main > article >  p::first-letter {
 	font: 130% bold;
 }
 
-.main > article > h1,
-.main > article > h2 {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;   	
-	margin: 0;
-	padding: 5px 2%;							/* Distans från vänstersida ; subtrahera 2 % ifrån width! Samma som main paragraferna för att skapa enhet. */
+.homepage .main > article > h1,
+.homepage .main > article > h2 {
+	padding: 5px 2%;							/* OBS! ONÖDIG?! BOX SIZING I GLOBALA REGLER! Distans från vänstersida ; subtrahera 2 % ifrån width! Samma som main paragraferna för att skapa enhet. */
 	width: 79%;								/*Width är 79%, samma som faux-columns bakgrund, för att kompensera för aside-elementen som också har 1% padding*/
-	background-color: #36A3D1;
-	color: white;
-	text-shadow: 1px 1px 1px darkgrey;
-	box-shadow: 0 2px 1px darkgrey;
-	z-index: 1;
-}
 
-.main > article > h2 {
-	font-size: 1.2em;							/* Förändring av typsnittens storlek, eftersom H1 och H2 är samma storlek!? */
 }
 
 
-footer {
-	clear: both; 								/* För att nollställa/cleara float från förut! */
+/* Start av CSS till sida: Kursen */
+
+.delmoment {
+	outline: 1px solid black;
 	margin: auto;
-	margin-top: 0;
-	padding: 0;	
-	background-color: #282828;   				/*Really dark grey for footer */
-	color: white;
-	width: 61%; 								/* Samma bredd som main */
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+	text-align: center;
+	padding: 2%;
 }
 
-footer > p {
-	margin: 0 0 1em  0;
-	padding: 0.5% 0;
+.delmoment p {
+	outline: 1px solid black;
+}
+
+table {
+	width: 60%;
+}
+
+table,
+table th,
+table td {
+	margin: auto;					/* Centers the div */
+	padding: 10px;
+	vertical-align: top;
+	
+
+	border-collapse: collapse;
+	border-spacing: 20px 20px; /*Sir, I'm gonna have to ask you to step away from your border.. */
+
+
 	text-align: center;
+	outline: 1px solid red;		 /* Provisorisk */
+}
+
+table th {
+	font-size: 170%;
 }
