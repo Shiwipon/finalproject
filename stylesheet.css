@@ -161,21 +161,21 @@ aside img {
 /* Allt innehåll till introtext på huvudsidan. */
 
 article {
-
 	/* display: block; */
 			background: linear-gradient(to right, #E8F3F4 79%, #3A3A3A 79%);   /* Faux column lösning till problemet med aside som inte räcker till footer. 79% eftersom aside-elementen tar 20% + (0.5x2) */
 	background-color: #E8F3F4;					/*Light blue grey */
 	width: 100%;
 												/* height: 100%; SÅ vitt jag kan se gör det här ingenting just nu */
 	-webkit-box-sizing: border-box;
-		box-sizing: border-box;   				/* Jag blev trÖtt ganska snabbt av nya systemet. Så för att bli mer vänd till att använda både system, har jag även border-box här. Vet inte om det är negativt att använda både bredvid varnadra? */
-	padding: 1em;
-	padding-left: 0;
-	padding-right: 20%;							/* Sätter article texten bort ifrån högerkanten, och ger aside mer utrymme. */
+		-moz-box-sizing: border-box;   				/* Jag blev trÖtt ganska snabbt av nya systemet. Så för att bli mer vänd till att använda både system, har jag även border-box här. Vet inte om det är negativt att använda både bredvid varnadra? */
+	padding: 1em 0;									/* Sätter article texten bort ifrån högerkanten, och ger aside mer utrymme. */
 	margin-bottom: 2%;
 	box-shadow: 0 1px 2px black;
 }
 
+.main > article > p {
+	padding-right: 25%;
+}
 
 .main > article >  p::first-letter {
 	font: 130% bold;
@@ -183,10 +183,11 @@ article {
 
 .main > article > h1,
 .main > article > h2 {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;   	
 	margin: 0;
 	padding: 5px 2%;							/* Distans från vänstersida ; subtrahera 2 % ifrån width! Samma som main paragraferna för att skapa enhet. */
-	width: 100%;								/* KOM IHÅG!!! Du sätte det här så stort för att se vad precis som går fel hos headern i Opera och Chrome! */
+	width: 79%;								/*Width är 79%, samma som faux-columns bakgrund, för att kompensera för aside-elementen som också har 1% padding*/
 	background-color: #36A3D1;
 	color: white;
 	text-shadow: 1px 1px 1px darkgrey;
