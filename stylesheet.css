@@ -41,7 +41,6 @@ body {
 	text-decoration: none;
 	color: white;
 	text-shadow: 2px 2px 1px grey;
- 
 }
 
 
@@ -228,10 +227,11 @@ aside img {
 }
 
 
-/* Start av CSS till sida: Kursen */
+
+/* BÖRJAN AV KOD TILL SIDA: KURSEN  */
 
 .delmoment {
-	outline: 1px solid black;
+	outline: 1px solid black;		/*Provosorisk*/
 	margin: auto;
 	text-align: center;
 	padding: 2%;
@@ -241,8 +241,17 @@ aside img {
 	outline: 1px solid black;
 }
 
+.tableall {
+
+}
+
 table {
 	width: 60%;
+
+	border-radius: 0 0 30px 30px;
+	-ie-box-shadow: 10px 10px 3px black;			/*Problem needs fixing */
+		box-shadow: 0 2px 3px black;
+
 }
 
 table,
@@ -253,15 +262,80 @@ table td {
 	vertical-align: middle;
 	
 
-	border-collapse: collapse;
-	border-spacing: 20px 20px; /*Sir, I'm gonna have to ask you to step away from your border.. */
-
+	border-collapse: collapse; 
+	
+	/* Gör ingenting? border-spacing: 40px 2em; 					/* REMOVE! Sir, I'm gonna have to ask you to step away from your border.. */ 
 
 	text-align: center;
-	outline: 1px solid red;		 /* Provisorisk */
+	/* outline: 1px solid red;		 /* Provisorisk */
 }
 
+/* Table header styling */ 
 th {
+	background: linear-gradient(#595858 , #282828);
+	background-color: #808080;
+
 	font-size: 170%;
-	background: #808080;
+	color: white;
 }
+
+/*Selekterar sista TR och sedan nästsista td för att få rundning på vänsterhörnet. 
+Tyvärr funkar pseudo-barn selektorer endast med IE9+, men jag ville ändå försöka använda denna märkliga selektor. 
+		Fix till border-radius av table (vänster underkant) till alla browser är att använda en klass-selektor. */
+tr:nth-last-child(1) > td:nth-last-child(2),
+.tablecorner   {   
+	border-bottom-left-radius: 30px;
+}
+
+tr:nth-last-child(1) > td:nth-last-child(1) {
+	border-bottom-right-radius: 30px;
+}
+
+/* Vill inte att border ska gå på andra spalten också, det ser ut ful och funkar inte med border-radius!*/
+tr > td:first-child {
+	border-right: 1px solid #EDEDED;
+}
+
+
+/* Zebra striping + hoverfärg till spalten Innehåll */
+tr:nth-child(odd) {
+	background-color: #EAEAEA;
+}
+
+tr:nth-child(even) {
+	background-color: #D1D1D1;
+}
+
+tr:hover,
+td:hover {
+	background-color: lightblue;
+}
+
+
+td:nth-child(1) {
+	/* Första kolumnen som blir blå*/
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+	background-color: #36A3D1;
+}
+
+
+td {
+	margin: 0 20px;
+}
+
+td { 	
+	border-top: 1px solid #EDEDED;
+}
+
+
+tr, 
+tr td {
+	-webkit-transition: background-color 0.2s; /* Safari 5-6 */
+	 	-moz-transition: background-color 0.2s; /* Firefox < 15 */
+			-ms-transition: background-color 0.2s; /* För symmetrins skull */
+			   -o-transition: background-color 0.2s; /* Opera < 12.1 */
+				   transition: background-color 0.2s; 
+}
+
