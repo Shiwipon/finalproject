@@ -121,8 +121,8 @@ nav {
 	padding: 0 0.5% 0.1% 0.5%;  		/* För att skapa balken bredvid main och aside, och ha lite utrymme på underkanten*/	
 }
 
-.main > article > h1,
-.main > article > h2 {
+.main h1,
+.main h2 {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;   	
 	margin: 0;
@@ -134,7 +134,7 @@ nav {
 	z-index: 1;
 }
 
-.main > article > h2 {
+.main h2 {
 	font-size: 1.2em;							/* Förändring av typsnittens storlek, eftersom H1 och H2 är samma storlek!? */
 }
 
@@ -219,8 +219,8 @@ aside img {
 	font: 130% bold;
 }
 
-.homepage .main > article > h1,
-.homepage .main > article > h2 {
+.homepage .main  h1,
+.homepage .main  h2 {
 	padding: 5px 2%;							/* OBS! ONÖDIG?! BOX SIZING I GLOBALA REGLER! Distans från vänstersida ; subtrahera 2 % ifrån width! Samma som main paragraferna för att skapa enhet. */
 	width: 79%;								/*Width är 79%, samma som faux-columns bakgrund, för att kompensera för aside-elementen som också har 1% padding*/
 
@@ -257,7 +257,7 @@ table {
 table,
 table th,
 table td {
-	margin: auto;					/* Centers the div */
+	margin: auto;						/* Centers the div */
 	padding: 10px;
 	vertical-align: middle;
 	
@@ -342,3 +342,84 @@ tr td {
 
 
 /* BÖRJAN AV CSS TILL KONTAKT SIDAN */
+.form {
+	background-color: lightgrey;
+	margin: auto;
+	
+	width: 60%;	
+
+}
+
+.form,
+.form fieldset {
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 10px;
+	padding: 10px;
+	
+}
+
+fieldset {
+	padding: 1em;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+legend {
+	color: black;
+	font-weight: bold;
+	font-size: x-large;
+	text-shadow: 0 2px 1px darkgrey;
+	padding-bottom: 0.2em;
+}
+
+form p {
+	position: relative; 		/* Anchor till andra element med position absolute */
+	margin: 0.3em 0;			/* Utrymme mellan alla olika element/paragraf/fälter*/
+	margin-bottom: 0; 			/* Remove excessive space lower part. */
+
+	/*background: OLDERBROWSERHEX; */
+	background: rgba(255,255,255,.3);  /*Gör paragrafstycke transparant */
+	/*border-color: COMPATIBLE; */
+	border-color: rgba(255,255,255,.6);
+
+	line-height: 20px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 5px;
+}
+
+label {
+	display: inline-block;
+	width: 90px;
+	margin-right: 5px;
+	text-align: right;				/*Sätter label/titeltext på högersidan av textfälter */
+	vertical-align: top;			/*Sätter label/titeltext på ovansidan av textfälter */
+}
+
+label > strong {
+	position: absolute;
+	padding-top: 4px;   			/*Stjärnorna sitter lite mer i mitten av fälten */
+	left: 620px;
+	text-align: left;
+	font-size: 2em;
+	color: #36A3D1;
+	text-shadow: 0 1px 1px lightblue;
+}
+
+input[type="text"], 
+input[type="email"] {
+	width: 490px;					/*Samma som textarea */
+}
+
+textarea {
+	min-height: 200px;				/*För att fastställa spaltens höjd; vill inte att den ska bli mindre än värdet här. */
+	width: 490px;					/*Samma som inputtypes text och email */
+	height: 200px;
+	resize: vertical;
+}
+
+input[type="submit"] {
+	display: block;
+	margin: auto;
+}
