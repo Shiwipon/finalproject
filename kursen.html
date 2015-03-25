@@ -10,15 +10,12 @@
 <body class="kursen">
 	<header>
 		<div class="headerwrapper">
-		
-			
 			<a href="index.html" class="title"><img src="http://doldajobb.se/wp-content/uploads/2013/01/miroi_logo.png" class="miroilogo" class="logo" title="Hemma" /> MiROi Webbutveckling 1</a>
-		
 		</div>
 	</header>
 
+
 	<div class="wrapper">
-		
 		<nav>
 		   <ul class="topnav"> 
 			   	<li> <a href="index.html"> Home  </a> </li>
@@ -27,9 +24,10 @@
 			</ul>
 		</nav>
 	
-		<div class="main"> <!-- Floatsie element holder -->
+		<div class="containerbakgrund"> <!-- Mörkgråa bakgrund bakom article -->
+			<div class="main">
 			  
-				<article> <!-- Float to left!-->
+				<article class="content"> <!-- Float to left!-->
 					<h1> Vad innehåller kursen Webbutveckling 1?</h1>
 					<!--<h1> Vad innehåller kursen Webbutveckling 1?</h1>-->
 						<p>Om man är helt nytt till webbutveckling är det absolut förståeligt att kursen kan vara lite tufft ibland. Det finns många koncepter som man inte kan bara komma ihåg, utan man måste öva med de olika metoderna att skapa en webbsida för att verkligen lära sig tekniken. Därför ska jag berätta lite om mina erfarenheter, samt några tips till kursen här. 
@@ -90,28 +88,65 @@
 										Upprepning av viktiga kapitel till kursens sista uppgift</td>
 
 								</tr>	
+								</tbody>
 							</table>
 						</section>
 						<section>
-							<h2> Erfarenheter med Uppgifter </h2>
-							<p> 
-							Om man är helt nytt till webbutveckling är det absolut förståeligt att kursen kan vara lite tufft ibland. Det finns många koncepter som man inte kan bara komma ihåg, utan man måste öva med de olika metoderna att skapa en webbsida för att verkligen lära sig tekniken. Därför ska jag berätta lite om mina erfarenheter, samt några tips till kursen här. <br /> <br /> Det viktigaste att komma ihåg att man alltid kan lära sig utveckling så länge man är intresserad! 
-							</p>
-
-							
 							<h2> Kapitel  5 : En Första Sida </h2>
 							<p>
-							I denna kapitel får man skapa sin första verkliga sida av en webbsida. <br />
-							 Boken tar dig genom varje steg av kodprocessen. Men den visar inte bara vilken kod du behöver skriva, utan också varför och vad koden gör. Det gör att man för en bättre förståelse av vad precis man gör, och faktiskt erinrar vad man bör lära sig. Särskilt kul var tipsen att skriva CSS-koden i firefox’s redigerare eftersom man får se live vad som förändras och om någonting går fel. <img src="images/forstasida.png" class="kap5" />
+							<img src="images/forstasida.png" class="kap5">I denna kapitel får man skapa sin första verkliga sida av en webbsida. <br />
+							 Boken tar dig genom varje steg av kodprocessen. Men den visar inte bara vilken kod du behöver skriva, utan också varför och vad koden gör. Det gör att man för en bättre förståelse av vad precis man gör, och faktiskt erinrar vad man bör lära sig. Särskilt kul var tipsen att skriva CSS-koden i firefox’s redigerare eftersom man får se live vad som förändras och om någonting går fel. > </p>
 
-							Ibland fastnade jag med denna uppgift, och sökte långt efter vad som var fel. Det man måste verkligen komma ihåg är att det faktiskt finns så kallade ’validators’, som kan hitta typfel och andra små problem som man inte alltid ser med egna ögon! Särskilt i CSS har det varit av mycket hjälp. En exempel är när jag använde background-image, istället för background till att skapa en linear-gradient. (Färgtoning på bakgrunden.) 
+							<p>
+							Ibland fastnade jag med denna uppgift, och sökte långt efter vad som var fel. Det man måste verkligen komma ihåg är att det faktiskt finns så kallade ’validators’,>som kan hitta typfel och andra små problem som man inte alltid ser med egna ögon! Särskilt i CSS har det varit av mycket hjälp. 
 							</p>
+
+							<p>
+							   En exempel är när jag använde background-image, istället för background till att skapa en linear-gradient. (Färgtoning på bakgrunden.)  I detta var <abbr title="Mozilla Developer Network">MDN</abbr> mycket hjälpsam med att förklara varför det inte fungerade. Problemet var nämligen att CSS-värde linear-gradient skapar en bild, snarare än bara en färgkod, och därför behöver kallas fram till bakgrund egenskap istället för background-color. 
+						
+							</p>
+							<br style="clear:both"/> 
 						</section>
-				</article>
+						<section>	
+							<h2> Frågor i arbetsboken </h2>
+							<p>
+								Kursen i webbutveckling kan naturligtvis inte vara komplett praktiskt med bara övningar i programmering och webbskapande. Det finns också många teoretiska kapitel som fokuserar sig på ämne som CSS och HTML historia, de olika teckenkodningar som finns i programmering, och även hur webbläsare behandlar ljud och video. Till dessa kapitel tillhör frågor om avkortningar, varför somliga metoder är bättre än andra och m.m. 
+							</p>
+
+							<p>
+								<img src="images/questions.png" class="questions"/>
+								Att komma ihåg alla svår på dessa frågor är dock ganska svårt! Särskilt om en kapitel är lite tråkigt och jätteteoretiskt – såsom kapitel 6: Teckenkodning och fonter. Eller kapitel som beskriver vilka avkortningar är vad (t.ex. RC eller ol/ul/dl eller px/em/cm/%/pt/).
+								Vad hjälpte lite var att skriva ner alla förklaringar i en kladblock. Vad inte hjälper, är att man glömmer att repetera allt man har skrivit ner regelbunden! Att upprepa information du läser dig under kursen är nyckeln till att komma ihåg det på provet.  Annars kan det bli att du måste chansa på ord, t.ex. “dated list” istället för “definition list” (oops…) .
+								Men med dessa fel finns det åtminstone en fördel; man kommer inte snabbt glömma vad allt betyder när man vet att man hade sådana saker fel på någonting viktig. En lite snabb googling, en bra förklaring och rätta kunskap sitter fast. <br /> <br />Förhoppningsvis. ;)
+
 			
-		</div> <!-- Div end for main -->
+							 </p>
+							 <br style="clear:both"/> 
+						</section>
+						<section>
+							<h2> Några tips till kursen: </h2>
+							<p>
+								
+								<img src="images/littlebugs.jpg" class="bugs">Kurslitteraturen ger en suggestion till extra läsmaterial bredvid kursen, nämligen InterACT with Web Standards. 
+								Denna bok har visat sig vara verkligen värdefull, eftersom den ger en extra förklaring till materialet som kursboken går igenom.
+								Särskilt när man har svårt att förstå eller komma ihåg ett koncept kan denna bok ge en annan perspektiv och förklaring på tekniken.  Den berättar också lite djupare på webstandarder och vad är “fin” kod. <br /> Överallt är boken en roligt extra till kurslitteraturen, och kan starkt rekommenderas! 
+							</p>
+							<p>
+							Och till sist som rad; ge inte upp! Om man är intresserat i webbutveckling, eller allmän i programmering, så måste man bygga upp uthållighet. Man ska garanterad möta nya konstiga, till synes oförklarbara fel 
+							som kan vara otroligt frustrerande. Men så är bara ämnet; programmering är sensitiv mot både stor- och småfel. Det enda man kan göra, är att njuta av jakten på lösningen, aldrig sluta googla, och hålla tummerna att nästa lösningen kommer faktiskt att fungera. Och om man försöker långt nog, så gör det!<br /> 
+							</p>
+							<p id="last">
+							Lycka till!
+							</p>
 
+				</article>
+			</div> <!-- Div end for main -->
 
+				<br style="clear:both"/>  
+						<!-- Fix till dumma floatproblem! W3C standard enligt http://www.sitepoint.com/simple-clearing-of-floats/ . Lite gammal källa, men det funkar och jag vill inte floata-allt för att fixa problemet.  ;__;
+							"Overflow: auto;" - metoden verkar ha en problem med scrollbars och jag vill inte hellre ta risken med det just nu. Jag hoppas att det är en acceptabel metod! -->
+
+		</div> <!-- Div end for containerbakgrund -->
 	</div> <!-- Div end for wrapper -->
 
 	<footer>
