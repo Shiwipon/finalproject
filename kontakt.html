@@ -12,7 +12,7 @@
 	<header>
 		<div class="headerwrapper">
 		
-			<a href="index.html" class="title"> <img src="http://doldajobb.se/wp-content/uploads/2013/01/miroi_logo.png" class="miroilogo" class="logo" title="Hemma" />  MiROi Webbutveckling 1</a>
+			<a href="index.html" class="title"> <img src="images/miroilogo.png" class="miroilogo" alt="Logo av Miroi" /> <span id="miroititle"> MiROi </span> Webbutveckling 1</a>
 		
 		</div>
 	</header>
@@ -27,7 +27,7 @@
 			</ul>
 		</nav>
 	
-
+	<div class="containerbakgrund">
 		<div class="main"> <!-- Floatsie element holder -->
 					<article> <!-- Float to left!-->
 					<h1> Kontakta mig! </h1>
@@ -36,54 +36,54 @@
 						</p>
 
 						<div class="form">
-							<form action="contact.php" method="post">
+							<form action="scripts/contact.php" method="post">
 								<fieldset>
 									<legend>Vem är du?</legend>
 										<p>
-											<label for="usname">Namn:
+											<label for="usname">Namn: {$uname_extra}
 												<strong class="required" title="Obligatorisk uppgift">*</strong>
+											}
 											</label>
-											<input type="text" name="uname" id="usname" required placeholder="Förnamn Efternamn" />
+											<input type="text" name="uname" id="usname" required placeholder="Förnamn Efternamn" value="{$uname}" />
 										</p>
 										<p> 
-											<label for="umail">Mejladress:
+											<label for="umail">Mejladress: {$umail_extra}
 												<strong class="required" title="Obligatorisk uppgift">*</strong>
+											}
 											</label>
-											<input type="email" name="umail" id="umail" required placeholder="dinmejl@mejl.com" />  <!-- Vi använder umail och uname eftersom scripten vill det -->
+											<input type="email" name="umail" id="umail" required placeholder="dinmejl@mejl.com" value="{$umail}" />  <!-- Vi använder umail och uname eftersom scripten vill det -->
 										</p>
 								</fieldset>
 
 								<fieldset>
-									<legend> Ditt meddelande </legend>
+									<legend>Ditt meddelande:</legend>
 										<p>
-											<label for="title">Subjekt:
+											<label for="msubject">Subjekt: {$msubject_extra}
 											<strong class="required" title="Obligatorisk uppgift">*</strong>
 											</label>
-											<input type="text" name="title" id="title" required placeholder="Minst 5 tecken" />
+											<input type="text" name="msubject" id="msubject" required placeholder="Minst 5 tecken" value="{$msubject}" />
 										</p>
 										<p>
-											<label for="mmessage">Meddelande:
+											<label for="mmessage">Meddelande: {$mmessage_extra}
 												<strong class="required" title="Obligatorisk uppgift">*</strong>
+											}
 											</label>
-												<textarea name="mmessage" id="mmessage" required placeholder="Skriv ditt meddelande. Minst 25 tecken."></textarea>
+												<textarea name="mmessage" id="mmessage" required placeholder="Skriv ditt meddelande. Minst 25 tecken.">{$mmessage}</textarea>
 										</p>
-										
-								</fieldset id="submitbutton">
+								</fieldset>
+								<fieldset id="submitbutton">
 								<input type="submit" value="Skicka" />
-								<fieldset>
-									
+								<input type="hidden" name="prevent_multiple_submits" value="{$random_string}" />
 								</fieldset>
 							</form>
 						</div>
 				</article>
-			
-		</div> <!-- Div end for main -->
-
-
+			</div> <!-- Div end for main -->
+		</div>
 	</div> <!-- Div end for wrapper -->
-
 	<footer>
 			<p> Credit to Anouschka </p>	
-		</footer>
-</body>
+	</footer>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</body >
 </html>
